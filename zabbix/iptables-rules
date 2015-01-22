@@ -8,16 +8,6 @@
 -A INPUT -i lo -j ACCEPT
 # allow pings
 -A INPUT -p icmp --icmp-type 8 -s 0/0 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
-# SSH in subnet
--A INPUT -p tcp -s 10.192.92.0/22 --dport 22 -j ACCEPT
--A INPUT -p tcp -s 150.135.15.160/27 --dport 22 -j ACCEPT
--A INPUT -p tcp -s 150.135.255.0/26 --dport 22 -j ACCEPT
-# allow access from tunnel1/2 and dalek
--A INPUT -s 150.135.15.167 -j ACCEPT
--A INPUT -s 150.135.15.168 -j ACCEPT
--A INPUT -s 10.192.92.7 -j ACCEPT
-# allow all from timelord
--A INPUT -s 10.192.92.3 -j ACCEPT
 # allow responses from outbound connections
 -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 # drop dhcp requests
