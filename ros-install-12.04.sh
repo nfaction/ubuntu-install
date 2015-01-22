@@ -20,3 +20,5 @@ echo "source /opt/ros/hydro/setup.bash"
 
 echo "Installing Rosinstall..."
 apt-get install python-rosinstall
+
+exit 0

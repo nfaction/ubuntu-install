@@ -64,3 +64,5 @@ nc -z -w 3 $host $port > /dev/null 2>&1
     fi
 
 echo "Installation of Zabbix-agent complete!"
+
+exit 0

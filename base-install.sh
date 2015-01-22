@@ -5,7 +5,7 @@ echo "Installing standard software...."
 # Install basic software #
 ##########################
 apt-get update
-apt-get -y install gnome-session-fallback vim emacs ntpdate
+apt-get -y install openssh-server byobu emacs ntpdate zsh tcsh
 
 #######################
 # Install all updates #
@@ -21,3 +21,5 @@ sed -i '/^# Specify one or more NTP servers./a server ntp1.sista.arizona.edu\nse
 # Set time-zone manually #
 ##########################
 dpkg-reconfigure tzdata
+
+exit 0

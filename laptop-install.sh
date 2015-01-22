@@ -4,3 +4,5 @@
 add-apt-repository ppa:linrunner/tlp
 apt-get update && apt-get install tlp tlp-rdw
 tlp start
+
+exit 0
