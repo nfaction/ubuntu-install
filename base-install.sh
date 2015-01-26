@@ -5,7 +5,7 @@ echo "Installing standard software...."
 # Install basic software #
 ##########################
 apt-get update
-apt-get -y install openssh-server byobu emacs ntpdate zsh tcsh
+apt-get -y install openssh-server byobu vim emacs ntpdate zsh tcsh
 
 #######################
 # Install all updates #
