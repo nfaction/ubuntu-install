@@ -23,6 +23,13 @@ echo "domain sista" >> /etc/yp.conf
 echo "ypserver ns1.sista.arizona.edu" >> /etc/yp.conf
 echo "ypserver ns2.sista.arizona.edu" >> /etc/yp.conf
 
+echo "Setting up Autofs..."
+echo "/net    /etc/auto.net" >> /etc/auto.master
+echo "/home   yp:auto.home  -rw,intr,nosuid,noacl,vers=3" >> /etc/auto.master
+
+service autofs restart
+
+
 service ypbind restart
 
 echo "session optional        pam_mkhomedir.so skel=/etc/skel umask=077" >> /etc/pam.d/common-session
