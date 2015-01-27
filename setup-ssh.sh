@@ -11,8 +11,6 @@ mkdir -p /root/.ssh;chmod 700 /root/.ssh;cd /root/.ssh;mkdir -p /root/.ssh/tmp;t
 ###########################
 mkdir -p ~/.ssh;chmod 700 ~/.ssh;cd ~/.ssh;mkdir -p ~/.ssh/tmp;touch ~/.ssh/authorized_keys
 
-# ssh-keygen -t rsa -b 4096
-
 ################################
 # Setting up user's SSH Config #
 ################################
