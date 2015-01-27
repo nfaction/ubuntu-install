@@ -4,12 +4,12 @@ echo "Setting up SSH..."
 ###########################
 # Setting up root account #
 ###########################
-mkdir -p /root/.ssh;chmod 700 /root/.ssh;cd /root/.ssh;mkdir -p /root/.ssh/tmp
+mkdir -p /root/.ssh;chmod 700 /root/.ssh;cd /root/.ssh;mkdir -p /root/.ssh/tmp;touch /root/.ssh/authorized_keys 
 
 ###########################
 # Setting up user account #
 ###########################
-mkdir -p ~/.ssh;chmod 700 ~/.ssh;cd ~/.ssh;mkdir -p ~/.ssh/tmp
+mkdir -p ~/.ssh;chmod 700 ~/.ssh;cd ~/.ssh;mkdir -p ~/.ssh/tmp;touch ~/.ssh/authorized_keys
 
 # ssh-keygen -t rsa -b 4096
 
