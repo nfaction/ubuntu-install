@@ -27,11 +27,6 @@ echo "Setting up Autofs..."
 echo "/net    /etc/auto.net" >> /etc/auto.master
 echo "/home   yp:auto.home  -rw,intr,nosuid,noacl,vers=3" >> /etc/auto.master
 
-service autofs restart
-
-
-service ypbind restart
-
 echo "session optional        pam_mkhomedir.so skel=/etc/skel umask=077" >> /etc/pam.d/common-session
 
 sed -i "s/exit 0/#exit 0/" /etc/rc.local
@@ -63,6 +58,11 @@ greeter-hide-users=true
 allow-guest=false
 user-session=gnome-fallback" > /etc/lightdm/lightdm.conf
 
+#
+# Restart all the things!
+#
 service lightdm restart
+service autofs restart
+service ypbind restart
 
 echo "Finished."
