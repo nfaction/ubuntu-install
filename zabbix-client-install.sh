@@ -12,7 +12,7 @@ sed -i "s/Hostname=Zabbix server/Hostname=${host}/" /etc/zabbix/zabbix_agentd.co
 service zabbix-agent restart
 
 # Use only if using default iptables template for workstations
-sed -i "s/# allow responses from outbound connections/# allow zabbix agent\n-A INPUT -s 10.192.92.12 -p tcp -m tcp --dport 10050 -j ACCEPT\n-A INPUT -s 10.192.92.12 -p tcp -m tcp --dport 10051 -j ACCEPT\n# allow responses from outbound connections" /etc/default/iptables-rules
+sed -i "s/# allow responses from outbound connections/# allow zabbix agent\n-A INPUT -s 10.192.92.12 -p tcp -m tcp --dport 10050 -j ACCEPT\n-A INPUT -s 10.192.92.12 -p tcp -m tcp --dport 10051 -j ACCEPT\n# allow responses from outbound connections/" /etc/default/iptables-rules
 service iptables restart
 
 echo "Testing connection..."
